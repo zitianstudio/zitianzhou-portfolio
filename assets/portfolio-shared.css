@@ -1,0 +1,56 @@
+.header-nav-item--folder > .header-nav-folder-title {
+  cursor: pointer;
+}
+
+.header-nav-item--folder > .header-nav-folder-title .header-nav-folder-title-text,
+.header-menu-nav-item > a[data-folder-id="/projects"] .header-nav-folder-title-text {
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.header-nav-item--folder:hover > .header-nav-folder-title .header-nav-folder-title-text,
+.header-nav-item--folder > .header-nav-folder-title:is(:focus-visible, [aria-expanded="true"]) .header-nav-folder-title-text,
+.header-menu-nav-item > a[data-folder-id="/projects"]:is(:hover, :focus-visible) .header-nav-folder-title-text {
+  background-color: rgb(127 127 127 / 15%);
+  box-shadow: 0 0 0 0.32em rgb(127 127 127 / 15%);
+}
+
+.header-nav-folder-content .header-nav-folder-item > a {
+  display: block;
+  padding: 0.42em 0.55em;
+  border-radius: 6px;
+}
+
+.header-nav-folder-content .header-nav-folder-item > a:is(:hover, :focus-visible),
+.header-menu-nav-folder[data-folder="/projects"] .header-menu-nav-item > a:is(:hover, :focus-visible) {
+  background-color: rgb(127 127 127 / 15%);
+}
+
+#footer-sections .portfolio-footer-linkedin {
+  color: inherit !important;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+#footer-sections .sqs-html-content .portfolio-footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3em;
+  padding: 0.2em;
+  vertical-align: -0.14em;
+}
+
+#footer-sections .portfolio-footer-linkedin:hover {
+  opacity: 0.75;
+}
+
+#footer-sections .portfolio-footer-linkedin:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#footer-sections .sqs-svg-icon--wrapper.linkedin-unauth {
+  display: none;
+}
