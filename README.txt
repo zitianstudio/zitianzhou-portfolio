@@ -1,0 +1,1 @@
+Open index.html to preview the portfolio. Upload the complete folder contents to the root of your web host. Keep each project folder and its companion *_files asset folder together. The resume page links to the existing Google Drive PDF. Vimeo video embeds need an internet connection.
