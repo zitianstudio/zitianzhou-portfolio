@@ -164,6 +164,10 @@
   margin-top: 26px;
 }
 
+.case-stats--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .case-stat {
   display: grid;
   align-content: start;
@@ -317,6 +321,33 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(12px, 2.25vw, 24px);
+}
+
+.case-history {
+  margin-top: 24px;
+}
+
+.case-history .home-text-link {
+  margin-top: 6px;
+}
+
+.case-library-visual {
+  margin: 24px 0 0;
+  background: #fff;
+}
+
+.case-feature__visual--portrait .case-zoom {
+  width: min(100%, 270px);
+}
+
+.case-feature--styles {
+  scroll-margin-top: 64px;
+}
+
+.case-style-grid {
+  display: grid;
+  gap: 12px;
+  padding: 0 clamp(20px, 4vw, 44px) clamp(20px, 4vw, 44px);
 }
 
 .case-card__image {
@@ -522,7 +553,22 @@ html:has(.case-lightbox[open]) { overflow: hidden; }
 .case-back { margin-top: 12px; }
 
 @media (min-width: 761px) {
-  .case-hero--system h1 { font-size: clamp(2.65rem, 4.4vw, 4.25rem); }
+  :is(.case-hero--system, .case-hero--presentation) h1 {
+    font-size: clamp(2.65rem, 4.4vw, 4.25rem);
+  }
+
+  .case-feature--styles {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .case-feature--styles > .case-feature__copy {
+    grid-area: 1 / 2;
+  }
+
+  .case-style-grid {
+    grid-area: 1 / 1;
+    padding: clamp(12px, 2vw, 24px);
+  }
 }
 
 @media (max-width: 760px) {
