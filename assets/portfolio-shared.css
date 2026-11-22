@@ -92,3 +92,17 @@
     transform: scale(1.05);
   }
 }
+
+/* Keep mobile navigation available when exported entrance animations do not run. */
+#header .header-display-mobile :is(.preFade, .preSlide) {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 1024px) {
+  /* Lay out exported content without the initial animation offset. */
+  :is(#page, #footer-sections) :is(.preFade, .preSlide) {
+    opacity: 1;
+    transform: none;
+  }
+}
