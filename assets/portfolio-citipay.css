@@ -271,6 +271,26 @@
   color: var(--home-accent);
 }
 
+.case-theme--loan .case-journey {
+  --journey-gap: clamp(10px, 1.25vw, 16px);
+  display: flex;
+  align-items: center;
+  gap: var(--journey-gap);
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 7px;
+  background: var(--case-media);
+}
+
+.case-theme--loan .case-journey li {
+  justify-content: flex-start;
+  gap: var(--journey-gap);
+  padding: 0;
+  background: transparent;
+}
+
 .case-decisions {
   display: grid;
   gap: clamp(22px, 4vw, 44px);
@@ -793,6 +813,13 @@ html:has(.case-lightbox[open]) { overflow: hidden; }
   .case-section { scroll-margin-top: 12px; }
   .case-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-journey li:nth-child(2) span { transform: rotate(90deg); }
+  .case-theme--loan .case-journey,
+  .case-theme--loan .case-journey li {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .case-theme--loan .case-journey li span { transform: rotate(90deg); }
   .case-hero h1 { font-size: clamp(2.55rem, 9vw, 4.4rem); }
 }
 
